@@ -28,7 +28,7 @@ sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
 
-classifier = KNeighborsClassifier(n_neighbors=11, p=2, metric='euclidean')
+classifier = KNeighborsClassifier(n_neighbors=11, p=2, metric='euclidean') #euclidean is mathematical formula which calculates the distances between each points of data
 classifier.fit(X_train, y_train)
 
 y_pred = classifier.predict(X_test)
